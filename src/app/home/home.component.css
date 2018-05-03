@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css?family=Righteous');
+@import url('https://fonts.googleapis.com/css?family=Didact+Gothic');
+
+.container {
+	display: grid;
+	grid-template-columns: 30% 1fr 30%;
+
+}
+
+.container .main-container{
+	grid-area: 1 / 2 / 2 / 3;
+
+}
+
+.main-container {
+	display: grid;
+	grid-template-columns: auto auto;
+	justify-content: center;
+	width: 100%;
+	background: var(--main-lighter-color);
+	box-shadow: var(--shadow);
+
+
+}
+.sub-container1 {
+	grid-area: 1 / 1 / 2 /2;
+	
+	color: var(--main-bg-color);
+	padding: 1em;
+
+}
+
+.sub-container1 h2{
+	font-family: 'Righteous', cursive;
+	font-size: 1.6em;
+	text-decoration: underline;
+}
+
+.sub-container1 p, .sub-container2 li, .sub-container2 p {
+	font-family: 'Didact Gothic', sans-serif;
+}
+
+.sub-container2 {
+	grid-area: 1 / 2 / 2 / 3;
+	
+	color: var(--main-bg-color);
+	padding: 1em;
+	/*box-shadow: var(--shadow);*/
+}
