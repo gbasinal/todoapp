@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=Do+Hyeon');
+
+ul.nav-link li {
+	list-style: none;
+	float: left;
+	margin-right: 20px;
+	font-family: 'Do Hyeon', sans-serif;
+	font-size: 1.5em;
+	color: var(--main-darker-color);
+}
+ul.nav-link li a{
+	color: var(--main-darker-color);
+	text-decoration: none;
+}
+ul.nav-link li a:hover{
+	color: var(--main-font-color);
+	text-decoration: underline;
+}
+ul.nav-link:after {
+	display: block;
+    content: "";
+    clear: both;
+}
+
