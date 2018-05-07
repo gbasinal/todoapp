@@ -15,11 +15,10 @@
 .main-container {
 	display: grid;
 	grid-template-columns: auto auto;
-	justify-content: center;
 	width: 100%;
 	background: var(--main-lighter-color);
 	box-shadow: var(--shadow);
-	border-radius: 10px;
+	border-radius: 5px;
 
 
 }

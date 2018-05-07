@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Do+Hyeon');
 
+
+header{
+	display: grid;
+    grid-template-columns: 30% 1fr 30%;
+}
+header ul {
+	padding: 0;
+}
+
 ul.nav-link li {
 	list-style: none;
 	float: left;
