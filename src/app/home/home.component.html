@@ -20,10 +20,9 @@
 			</div>
 			<div>
 				<ul>
-					<li *ngFor="let todo of todo" (click)="removeItem()" id="{{ 'id-' + todo}}"> {{ todo }} </li>
+					<li *ngFor="let todo of todo; let i = index" (click)="removeItem(i)"> {{ todo }} </li>
 				</ul>
 			</div>	
-		</div>		
-	</div>
-	
-</div>
+		</div>	
+	</div>	
+</div>	

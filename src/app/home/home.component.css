@@ -1,27 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Righteous');
-@import url('https://fonts.googleapis.com/css?family=Didact+Gothic');
-
-.container {
-	display: grid;
-	grid-template-columns: 30% 1fr 30%;
-
-}
-
-.container .main-container{
-	grid-area: 1 / 2 / 2 / 3;
-
-}
-
-.main-container {
-	display: grid;
-	grid-template-columns: auto auto;
-	width: 100%;
-	background: var(--main-lighter-color);
-	box-shadow: var(--shadow);
-	border-radius: 5px;
 
 
-}
+
+
 .sub-container1 {
 	grid-area: 1 / 1 / 2 /2;
 	
