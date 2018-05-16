@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Do+Hyeon');
 
-
+@import url('https://fonts.googleapis.com/css?family=Righteous');
+@import url('https://fonts.googleapis.com/css?family=Didact+Gothic');
 header{
 	display: grid;
     grid-template-columns: 30% 1fr 30%;
@@ -22,8 +23,10 @@ ul.nav-link li a{
 	text-decoration: none;
 }
 ul.nav-link li a:hover{
-	color: var(--main-font-color);
+	color: var(--main-bg-color);
 	text-decoration: underline;
+	font-size: 1.1em;
+	transition: .5s;
 }
 ul.nav-link:after {
 	display: block;
@@ -31,3 +34,9 @@ ul.nav-link:after {
     clear: both;
 }
 
+
+@media (max-width: 767px) {
+	header{
+	    grid-template-columns: 10% 1fr 10%;
+	}	
+}
