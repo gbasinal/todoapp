@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { trigger, style, transition, animate, keyframes, query, stagger } from '@angular/animations';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-home',
@@ -35,24 +36,28 @@ export class HomeComponent implements OnInit {
 	itemCount: number;
 	btnText: string = 'Add an item';
 	todoText: string;
-	todo = [];
+	todos = [];
 
 
-	constructor() { }
+	constructor(private _data: DataService) { }
 
 	ngOnInit() {
-		this.itemCount = this.todo.length;
+		this.itemCount = this.todos.length;
+    this._data.todo.subscribe(res => this.todos = res);
+    this._data.changeTodo(this.todos);
 	}
 
 	addItem(){
-		this.todo.push(this.todoText);
+		this.todos.push(this.todoText);
 		this.todoText = '';
-		this.itemCount = this.todo.length;
+		this.itemCount = this.todos.length;
+    this._data.changeTodo(this.todos);
 
 	}
 	removeItem(i){
 				
-			this.todo.splice(i,1);
-			this.itemCount = this.todo.length;
+			this.todos.splice(i,1);
+			this.itemCount = this.todos.length;
+      this._data.changeTodo(this.todos);
 	}
 }

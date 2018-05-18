@@ -1,0 +1,16 @@
+<div class="container ">
+	<div>&nbsp;</div>
+	<div class="output">
+		<ul class="output-container" >
+			<li *ngFor="let todo of todos " [@flyInOut]>
+				<div class="output-box">
+					<span style="float:right">x</span>
+					<h3>{{ todo }}</h3>
+					<textarea placeholder="Enter your note/todo description here..." cols="30" rows="10"></textarea>
+				</div>
+			</li>			
+		</ul>
+
+	</div>
+	<div>&nbsp;</div>
+</div>

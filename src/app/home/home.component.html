@@ -10,7 +10,7 @@
 			</div>	
 		</div>
 
-		<div class="sub-container2" [@todos]="todo.length">
+		<div class="sub-container2" [@todos]="todos.length">
 			<div>
 				<p>Want to remind yourself? List it below</p>
 				<form>
@@ -18,11 +18,12 @@
 					<input type="submit" class="btn" [value]="btnText" (click)="addItem()">
 				</form>
 			</div>
-			<div>
+<!-- 			<div>
 				<ul>
-					<li *ngFor="let todo of todo; let i = index" (click)="removeItem(i)"> {{ todo }} </li>
+					<li *ngFor="let todo of todos; let i = index" (click)="removeItem(i)"> {{ todo }} </li>
 				</ul>
-			</div>	
+			</div> -->	
 		</div>	
 	</div>	
 </div>	
+<app-output></app-output>

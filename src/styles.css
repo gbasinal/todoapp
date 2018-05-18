@@ -24,7 +24,7 @@ body{
 	color: var(--main-font-color);
 }
 
-input, .btn {
+input, .btn, textarea {
     background-color: #fafafa9e;
     padding: .5em 10px;
     border: transparent;	
