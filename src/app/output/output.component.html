@@ -2,9 +2,9 @@
 	<div>&nbsp;</div>
 	<div class="output">
 		<ul class="output-container" >
-			<li *ngFor="let todo of todos " [@flyInOut]>
+			<li *ngFor="let todo of todos;  let i = index" [@flyInOut]>
 				<div class="output-box">
-					<span style="float:right">x</span>
+					<span style="float:right;cursor: pointer" (click)="removeItem(i)">&times;</span>
 					<h3>{{ todo }}</h3>
 					<textarea placeholder="Enter your note/todo description here..." cols="30" rows="10"></textarea>
 				</div>
