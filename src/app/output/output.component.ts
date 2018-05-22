@@ -27,18 +27,30 @@ import { trigger, style, transition, animate, state, keyframes } from '@angular/
   ]
 })
 export class OutputComponent implements OnInit {
-	todos: any;
-  itemCount : any;
+ todos: any;
+ itemCount: number;
+ counter: number;
   constructor(private _data: DataService) { }
 
   ngOnInit() {
-  	this._data.todo.subscribe(res => this.todos = res);
-  }
-    removeItem(i){
-        
-      this.todos.splice(i,1);
-      this.itemCount = this.todos.length;
+    this._data.todo.subscribe(res => this.todos = res);
+    this.itemCount = this.todos.length;
+    this._data.changeTodo(this.todos);
 
   }
+  removeItem(i){
+
+    this.todos.splice(i,1);
+    this.itemCount = this.todos.length;
+    this._data.todo.subscribe(res => this.todos = res);
+
+    this._data.changeCounter(this.counter);
+    
+    
+    
+
+    console.log(this.itemCount);
+
+  }  
 
 }
