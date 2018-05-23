@@ -4,18 +4,19 @@ import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 @Injectable()
 export class DataService {
 
-	private todos = new BehaviorSubject<any> (['Note Title...']);
+	private todos = new BehaviorSubject<any> (['']);
 	todo = this.todos.asObservable();
 
-	private itemCounts = new BehaviorSubject<any> ([0]);
-	itemCount = this.itemCounts.asObservable();
+	private itemCounter = new BehaviorSubject<any> (['']);
+	itemCount = this.itemCounter.asObservable();
 	constructor() { }
 
 	changeTodo(todo) {
 		this.todos.next(todo);
-		
 	}
-	changeCounter(counter) {
-		this.itemCounts.next(counter);
+
+	changeCounter(itemCount){
+		this.itemCounter.next(itemCount);
 	}
+
 }

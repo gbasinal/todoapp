@@ -39,12 +39,15 @@ export class HomeComponent implements OnInit {
 	todos = [];
 
 
+
 	constructor(private _data: DataService) { }
 
 	ngOnInit() {
-    
+
+    this._data.itemCount.subscribe(res => this.itemCount = res);
     this.itemCount = this.todos.length;
     this._data.changeTodo(this.todos);
+
 	}
 
 	addItem(){
@@ -53,7 +56,7 @@ export class HomeComponent implements OnInit {
 		this.todoText = '';
 		this.itemCount = this.todos.length;
     this._data.changeTodo(this.todos);
-
+    console.log(this.todos);
 	}
 
 

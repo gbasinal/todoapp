@@ -29,6 +29,7 @@ import { trigger, style, transition, animate, state, keyframes } from '@angular/
 export class OutputComponent implements OnInit {
  todos: any;
  itemCount: number;
+ itemCounter = [];
  counter: number;
   constructor(private _data: DataService) { }
 
@@ -41,15 +42,15 @@ export class OutputComponent implements OnInit {
   removeItem(i){
 
     this.todos.splice(i,1);
-    this.itemCount = this.todos.length;
     this._data.todo.subscribe(res => this.todos = res);
+    this._data.itemCount.subscribe(res => this.itemCounter = res);
+    this.itemCount = this.todos.length;
 
-    this._data.changeCounter(this.counter);
-    
+    this._data.changeCounter(this.itemCount);
     
     
 
-    console.log(this.itemCount);
+    console.log(this.itemCounter);
 
   }  
 
