@@ -35,3 +35,23 @@ textarea {
     margin: auto 0;
     padding: 0;
 }
+
+
+
+
+@media (max-width: 1299px) {
+	.output-container {
+	    grid-template-columns: 1fr 1fr;
+	}
+}
+
+@media (max-width: 767px) {
+	.output-container {
+	    grid-template-columns: 1fr;
+	}
+	.output {
+		grid-template-columns: 1fr;
+	}	
+}
+
+

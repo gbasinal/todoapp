@@ -11,6 +11,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { OutputComponent } from './output/output.component';
+import { RecordsComponent } from './records/records.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { OutputComponent } from './output/output.component';
     AppComponent,
     HomeComponent,
     AboutComponent,
-    OutputComponent
+    OutputComponent,
+    RecordsComponent
   ],
   imports: [
     BrowserModule,

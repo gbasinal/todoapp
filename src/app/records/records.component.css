@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css?family=Righteous');
+@import url('https://fonts.googleapis.com/css?family=Didact+Gothic');
+
+
+.record-container {
+	background: var(--main-lighter-color);
+	box-shadow: var(--shadow);
+	border-radius: 5px;
+}
+
+.record-desc {
+	color: white;
+	padding: 1em;
+	font-family: var(--base-font);
+}
+
+h3 {
+	color: white;
+	font-family: var(--base-font);
+	font-size: 1.3em;
+    padding: 0 1em;
+    text-decoration: underline;	
+}
+
+
+.sorting {
+    float: right;
+    padding: 1.1em 1em;
+    color: white;
+    font-family: var(--base-font);
+}
+
+select {
+    background: transparent;
+    border: 2px solid white;
+    padding: 5px;	
+}
+
