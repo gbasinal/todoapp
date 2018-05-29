@@ -31,12 +31,17 @@ export class OutputComponent implements OnInit {
  itemCount: number;
  itemCounter = [];
  counter: number;
+ save: boolean;
+ btnUpdt: string;
+
   constructor(private _data: DataService) { }
 
   ngOnInit() {
     this._data.todo.subscribe(res => this.todos = res);
     this.itemCount = this.todos.length;
     this._data.changeTodo(this.todos);
+    this.save = true;
+    this.btnUpdt = "Update Note";
 
   }
   removeItem(i){
@@ -48,10 +53,22 @@ export class OutputComponent implements OnInit {
 
     this._data.changeCounter(this.itemCount);
     
-    
+  
 
     console.log(this.itemCounter);
 
   }  
+  saveNote(save, i){  
+    this.save = !this.save;
+  
+
+    if(this.btnUpdt != "Save changes"){
+      this.btnUpdt = "Save changes";  
+    }else{
+      this.btnUpdt = "Update Note";
+    }
+    
+
+  }
 
 }

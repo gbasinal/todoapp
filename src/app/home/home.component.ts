@@ -34,7 +34,7 @@ import { DataService } from '../data.service';
 export class HomeComponent implements OnInit {
 
 	itemCount: number;
-	btnText: string = 'Add an item';
+	btnText: string = 'Add Note Title ';
 	todoText: string;
 	todos = [];
 
@@ -52,7 +52,13 @@ export class HomeComponent implements OnInit {
 
 	addItem(){
     this._data.todo.subscribe(res => this.todos = res);
-		this.todos.push(this.todoText);
+    console.log(this.todoText);
+    if(!this.todoText) {
+      alert('Please add a note title');
+    }else{
+      this.todos.push(this.todoText);
+    }
+		
 		this.todoText = '';
 		this.itemCount = this.todos.length;
     this._data.changeTodo(this.todos);

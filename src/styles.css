@@ -32,7 +32,7 @@ input, .btn, textarea {
 }
 .container {
 	display: grid;
-	grid-template-columns: 30% 1fr 30%;
+	grid-template-columns: auto 73% auto;
 
 }
 
@@ -44,7 +44,7 @@ input, .btn, textarea {
 
 .main-container {
 	display: grid;
-	grid-template-columns: auto auto;
+	grid-template-columns: 1fr 1fr;
 	width: 100%;
 	background: var(--main-lighter-color);
 	box-shadow: var(--shadow);
@@ -70,8 +70,14 @@ input, .btn, textarea {
 
 
 @media (max-width: 575px) {
+	
 	.container {
 	    grid-template-columns: 1fr;
-	}
+	}	
+	.container .main-container{
+		grid-area: 1 / 1 / 2 / 3;
+
+
+	}	
 }
 

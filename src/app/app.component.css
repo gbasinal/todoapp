@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/css?family=Didact+Gothic');
 header{
 	display: grid;
-    grid-template-columns: 30% 1fr 30%;
+    grid-template-columns: 1fr;
 }
 header ul {
 	padding: 0;
@@ -34,9 +34,3 @@ ul.nav-link:after {
     clear: both;
 }
 
-
-@media (max-width: 767px) {
-	header{
-	    grid-template-columns: 10% 1fr 10%;
-	}	
-}

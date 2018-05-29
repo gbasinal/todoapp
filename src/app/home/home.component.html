@@ -14,7 +14,7 @@
 			<div>
 				<p>Want to remind yourself? List it below</p>
 				<form>
-					<input type="text" name="item" placeholder="I will..." [(ngModel)]="todoText">
+					<input type="text" name="item" placeholder="I will..." [(ngModel)]="todoText" required>
 					<input type="submit" class="btn" [value]="btnText" (click)="addItem()">
 				</form>
 			</div>
