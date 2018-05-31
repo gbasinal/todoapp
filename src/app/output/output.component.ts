@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
 import { trigger, style, transition, animate, state, keyframes } from '@angular/animations';
-
+import * as $ from 'jquery';
+import 'jquery-ui/ui/widgets/sortable.js';
+import 'jquery-ui/ui/disable-selection.js';
 @Component({
   selector: 'app-output',
   templateUrl: './output.component.html',
@@ -42,6 +44,10 @@ export class OutputComponent implements OnInit {
     this._data.changeTodo(this.todos);
     this.save = true;
     this.btnUpdt = "Update Note";
+
+    $( "#outputBox" ).sortable();
+    $( "#outputBox" ).disableSelection();
+   
 
   }
   removeItem(i){

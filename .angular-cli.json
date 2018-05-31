@@ -21,7 +21,11 @@
       "styles": [
         "styles.css"
       ],
-      "scripts": [],
+      "scripts": [ 
+        "../node_modules/jquery/dist/jquery.min.js",
+        "../node_modules/jquery-ui/ui/widgets/sortable.js",
+        "../node_modules/jquery-ui/ui/disable-selection.js"
+      ], 
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
@@ -58,3 +62,4 @@
     "component": {}
   }
 }
+
