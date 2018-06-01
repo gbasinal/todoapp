@@ -24,6 +24,7 @@
       "scripts": [ 
         "../node_modules/jquery/dist/jquery.min.js",
         "../node_modules/jquery-ui/ui/widgets/sortable.js",
+        "../node_modules/jquery-ui/ui/widgets/draggable.js",
         "../node_modules/jquery-ui/ui/disable-selection.js"
       ], 
       "environmentSource": "environments/environment.ts",

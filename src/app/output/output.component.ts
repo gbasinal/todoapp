@@ -3,7 +3,9 @@ import { DataService } from '../data.service';
 import { trigger, style, transition, animate, state, keyframes } from '@angular/animations';
 import * as $ from 'jquery';
 import 'jquery-ui/ui/widgets/sortable.js';
+import 'jquery-ui/ui/widgets/draggable.js';
 import 'jquery-ui/ui/disable-selection.js';
+
 @Component({
   selector: 'app-output',
   templateUrl: './output.component.html',
@@ -35,6 +37,8 @@ export class OutputComponent implements OnInit {
  counter: number;
  save: boolean;
  btnUpdt: string;
+ note: string;
+
 
   constructor(private _data: DataService) { }
 
@@ -44,12 +48,32 @@ export class OutputComponent implements OnInit {
     this._data.changeTodo(this.todos);
     this.save = true;
     this.btnUpdt = "Update Note";
+    this.note = "#note";
+    this.counter =+1; 
 
-    $( "#outputBox" ).sortable();
-    $( "#outputBox" ).disableSelection();
-   
+
+    // $( "#outputBox" ).sortable({
+    //   revert: true
+    // });
+
+
+    //  $('#note'+ this.todos.length).click(function(){
+    //    console.log('woeking');
+    // });
+
+  
+
 
   }
+
+  dragItem(i){
+    $('#outputBox'+ i).draggable({
+      stack: '#outputBox'+i,
+      zIndex: 9999
+    });
+
+  }  
+
   removeItem(i){
 
     this.todos.splice(i,1);
@@ -64,17 +88,20 @@ export class OutputComponent implements OnInit {
     console.log(this.itemCounter);
 
   }  
-  saveNote(save, i){  
-    this.save = !this.save;
-  
-
-    if(this.btnUpdt != "Save changes"){
-      this.btnUpdt = "Save changes";  
+  saveNote(save,i){  
+    if(!$('#addNote'+i).attr("disabled")){
+      $('#addNote'+i).attr("disabled", true);
+      $('#note'+i).val('Update Note');
     }else{
-      this.btnUpdt = "Update Note";
+      $('#addNote'+i).attr("disabled", false);
+      $('#note'+i).val('Save Changes');
     }
     
+    
 
-  }
+    
+  
+
+  }  
 
 }

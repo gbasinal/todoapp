@@ -2,13 +2,16 @@
 <div class="container ">
 	<div>&nbsp;</div>
 	<div class="output">
-		<ul class="output-container" id="outputBox">
-			<li *ngFor="let todo of todos;  let i = index " [@flyInOut]>
-				<div class="output-box" >
-					<span style="float:right;cursor: pointer" (click)="removeItem(i)">&times;</span>
+	
+		<ul class="output-container">
+			<li  *ngFor="let todo of todos;  let i = index " [@flyInOut]>
+				<div class="output-box"  [id]="'outputBox'+ i" >
+					<i class="move-icon text-center fa fa-arrows" (click)="dragItem(i)"></i>				
+					<span style="float:right;cursor: pointer" (click)="removeItem(i)"><i class="fa fa-remove"></i></span>
+
 					<h3>{{ todo }}</h3>
-					<textarea placeholder="Enter your additional note/todo here..." cols="40" rows="10" [disabled]="save" ></textarea>
-					<input type="submit" class="btn" (click)="saveNote(save,i)" [value]="btnUpdt" [id]="i">
+					<textarea placeholder="Enter your additional note/todo here..." cols="40" rows="10" [disabled]="save" [id]="'addNote'+ i "></textarea>
+					<input type="submit" class="btn" (click)="saveNote(save,i)" [value]="btnUpdt" [id]="'note'+ i ">
 				</div>
 			</li>			
 		</ul>

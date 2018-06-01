@@ -2,6 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { trigger, style, transition, animate, keyframes, query, stagger } from '@angular/animations';
 import { DataService } from '../data.service';
 
+import * as $ from 'jquery';
+import 'jquery-ui/ui/widgets/sortable.js';
+import 'jquery-ui/ui/widgets/draggable.js';
+import 'jquery-ui/ui/disable-selection.js';
+
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -51,6 +57,8 @@ export class HomeComponent implements OnInit {
 	}
 
 	addItem(){
+
+
     this._data.todo.subscribe(res => this.todos = res);
     console.log(this.todoText);
     if(!this.todoText) {

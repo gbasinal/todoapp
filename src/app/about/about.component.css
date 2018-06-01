@@ -6,4 +6,21 @@
 	color: white;
 	padding: 1em;
 	font-family: 'Didact Gothic', sans-serif;
+	margin: auto;
+}
+
+.about-container {
+	display: grid;
+	grid-template-columns: 1fr;
+	width: 100%;
+	background: var(--main-lighter-color);
+	box-shadow: var(--shadow);
+	border-radius: 5px;
+}
+
+.about-container h2 {
+	font-family: 'Righteous', cursive;
+	font-size: 1.6em;
+	text-decoration: underline;	
+	color: white;
 }
