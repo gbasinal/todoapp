@@ -69,7 +69,7 @@ export class OutputComponent implements OnInit {
   dragItem(i){
     $('#outputBox'+ i).draggable({
       stack: '#outputBox'+i,
-      zIndex: 9999
+      zIndex: 99999
     });
 
   }  
